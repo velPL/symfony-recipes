@@ -1,0 +1,14 @@
+{
+  "recipes": {
+    "velpl/buggregator-profiler-bundle": [
+      "0.1"
+    ]
+  },
+  "branch": "main",
+  "is_contrib": true,
+  "_links": {
+    "repository": "github.com/velPL/symfony-recipes",
+    "origin_template": "{package}:{version}@github.com/velPL/symfony-recipes:main",
+    "recipe_template": "https://api.github.com/repos/velPL/symfony-recipes/contents/{package_dotted}.{version}.json"
+  }
+}

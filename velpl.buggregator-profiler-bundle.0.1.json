@@ -1,0 +1,17 @@
+{
+  "manifests": {
+    "velpl/buggregator-profiler-bundle": {
+      "manifest": {
+        "bundles": {
+          "Velpl\\BuggregatorProfilerBundle": [
+            "all"
+          ]
+        },
+        "copy-from-recipe": {
+          "config/packages/buggregator_profiler.yaml": "%CONFIG_DIR%/packages/buggregator_profiler.yaml"
+        }
+      },
+      "ref": "c8cd71cd8b11bf06d278dcad184d027681e1fc97"
+    }
+  }
+}
