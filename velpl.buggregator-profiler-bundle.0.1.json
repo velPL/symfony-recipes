@@ -3,7 +3,7 @@
     "velpl/buggregator-profiler-bundle": {
       "manifest": {
         "bundles": {
-          "Velpl\\BuggregatorProfilerBundle": [
+          "Velpl\\BuggregatorProfilerBundle\\BuggregatorProfilerBundle": [
             "all"
           ]
         },
@@ -23,7 +23,7 @@
           "executable": false
         }
       },
-      "ref": "1f3020dbb1981cb38c0ec3853f8741e16514f2f8"
+      "ref": "7d5542c65707c9c7ce0d73e121f0eafc0d8a9820"
     }
   }
 }
