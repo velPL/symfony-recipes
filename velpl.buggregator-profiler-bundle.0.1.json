@@ -15,7 +15,7 @@
           "BUGGREGATOR_BUNDLE_PROFILER_URL" : "${BUGGREGATOR_PROFILER_URL:-http://127.0.0.1:8000}"
         }
       },
-      "ref": "60d45b9357821bf75f20bb7a7ed1b10235773971"
+      "ref": "baeeb41a200d02967e9616b95d224353382e136b"
     }
   }
 }
