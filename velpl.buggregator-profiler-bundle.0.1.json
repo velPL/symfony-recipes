@@ -24,8 +24,9 @@
             "    profiler_url: '%env(string:BUGGREGATOR_BUNDLE_PROFILER_URL)%'",
             "",
             "when@dev:",
-            "    enabled: true",
-            "    profiler_url: '%env(string:BUGGREGATOR_BUNDLE_PROFILER_URL)%'"
+            "    buggregator_profiler:",
+            "        enabled: true",
+            "        profiler_url: '%env(string:BUGGREGATOR_BUNDLE_PROFILER_URL)%'"
           ],
           "executable": false
         }
