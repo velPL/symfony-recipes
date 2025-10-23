@@ -7,8 +7,9 @@
             "all"
           ]
         },
-        "copy-from-recipe": {
-          "config/packages/buggregator_profiler.yaml": "%CONFIG_DIR%/packages/buggregator_profiler.yaml"
+        "env": {
+          "BUGGREGATOR_PROFILER_URL" : "",
+          "BUGGREGATOR_BUNDLE_PROFILER_URL" : "${BUGGREGATOR_PROFILER_URL:-http://127.0.0.1:8000}"
         }
       },
       "files": {
@@ -17,13 +18,15 @@
             "buggregator_profiler:",
             "    enabled: false",
             "    application_name: 'Symfony App'",
-            "    profiler_url: 'http://127.0.0.1:9212'",
-            ""
+            "    profiler_url: '%env(string:BUGGREGATOR_BUNDLE_PROFILER_URL)%'",
+            "",
+            "when@dev:",
+            "    enabled: true"
           ],
           "executable": false
         }
       },
-      "ref": "7d5542c65707c9c7ce0d73e121f0eafc0d8a9820"
+      "ref": "f4d93e3ba243fff60004cc1e52ce5b7f463527bf"
     }
   }
 }
