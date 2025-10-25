@@ -11,8 +11,9 @@
           "config/": "%CONFIG_DIR%/"
         },
         "env": {
-          "BUGGREGATOR_PROFILER_URL" : "",
-          "BUGGREGATOR_BUNDLE_PROFILER_URL" : "${BUGGREGATOR_PROFILER_URL:-http://127.0.0.1:8000}"
+          "BUGGREGATOR_PROFILER_PORT" : "${BUGGREGATOR_PROFILER_PORT:-8000}",
+          "BUGGREGATOR_PROFILER_URL" : "${BUGGREGATOR_PROFILER_URL:-http://127.0.0.1}",
+          "BUGGREGATOR_BUNDLE_PROFILER_URL" : "${BUGGREGATOR_PROFILER_URL}:${BUGGREGATOR_PROFILER_PORT}"
         }
       },
       "files": {
@@ -31,7 +32,7 @@
           "executable": false
         }
       },
-      "ref": "7fc006e094ea465c12c5babf3c45f7749afd4a1d"
+      "ref": "58c9ed3354b433866a003a932fedb83e870a3ff0"
     }
   }
 }
