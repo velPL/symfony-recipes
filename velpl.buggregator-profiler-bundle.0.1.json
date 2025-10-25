@@ -20,15 +20,15 @@
           "compose.yaml": {
             "services": {
               "buggregator-profiler": {
-                "image": "ghcr.io/buggregator/server:latest",
-                "container_name": "${BUGGREGATOR_BUNDLE_CONTAINER_NAME:-buggregator-profiler}",
+                "image": " ghcr.io/buggregator/server:latest",
+                "container_name": " ${BUGGREGATOR_BUNDLE_CONTAINER_NAME:-buggregator-profiler}",
                 "ports": [
-                  "${BUGGREGATOR_PROFILER_PORT}:8000",
-                  "1025:1025",
-                  "9912:9912",
-                  "9913:9913"
+                  "- \"${BUGGREGATOR_PROFILER_PORT}:8000\"",
+                  "- \"1025:1025\"",
+                  "- \"9912:9912\"",
+                  "- \"9913:9913\""
                 ],
-                "restart": "unless-stopped"
+                "restart": " unless-stopped"
               }
             }
           }
@@ -50,7 +50,7 @@
           "executable": false
         }
       },
-      "ref": "f42cfed05e27724b09a4f489c74a7d1a781ae9b9"
+      "ref": "554782be7c0bdb8378471c664d3ca8415385949b"
     }
   }
 }
