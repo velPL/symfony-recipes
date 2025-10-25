@@ -13,7 +13,25 @@
         "env": {
           "BUGGREGATOR_PROFILER_PORT" : "${BUGGREGATOR_PROFILER_PORT:-8000}",
           "BUGGREGATOR_PROFILER_URL" : "${BUGGREGATOR_PROFILER_URL:-http://127.0.0.1}",
-          "BUGGREGATOR_BUNDLE_PROFILER_URL" : "${BUGGREGATOR_PROFILER_URL}:${BUGGREGATOR_PROFILER_PORT}"
+          "BUGGREGATOR_BUNDLE_PROFILER_URL" : "${BUGGREGATOR_PROFILER_URL}:${BUGGREGATOR_PROFILER_PORT}",
+          "BUGGREGATOR_BUNDLE_CONTAINER_NAME" : ""
+        },
+        "docker-compose": {
+          "compose.yaml": {
+            "services": {
+              "buggregator-profiler": {
+                "image": "ghcr.io/buggregator/server:latest",
+                "container_name": "${BUGGREGATOR_BUNDLE_CONTAINER_NAME:-buggregator-profiler}",
+                "ports": [
+                  "${BUGGREGATOR_PROFILER_PORT}:8000",
+                  "1025:1025",
+                  "9912:9912",
+                  "9913:9913"
+                ],
+                "restart": "unless-stopped"
+              }
+            }
+          }
         }
       },
       "files": {
@@ -32,7 +50,7 @@
           "executable": false
         }
       },
-      "ref": "58c9ed3354b433866a003a932fedb83e870a3ff0"
+      "ref": "f42cfed05e27724b09a4f489c74a7d1a781ae9b9"
     }
   }
 }
